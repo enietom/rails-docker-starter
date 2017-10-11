@@ -35,7 +35,10 @@ test:
   <<: *default
   database: <NAME-OF-YOUR-APP>_test
 ```
-Where `<NAME-OF-YOUR-APP>` is the name you used in the second step.
+   Where `<NAME-OF-YOUR-APP>` is the name you used in the second step.
 * Finally, boot the app with:
 
    `docker-compose up`
+
+   And go to http://localhost:3000 to find Rails' Welcome Page (if you are using Docker Machine
+   you'll need to go to `http://<IP-OF-YOUR-DOCKER-MACHINE>:3000`)
