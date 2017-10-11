@@ -4,14 +4,19 @@ Starter setup to create a Rails project using docker
 ## Credits
 Most of this setup was taken from the [Docker Compose Documentation](https://docs.docker.com/compose/rails/).
 
-## Commands
-* First generate the Rails skeleton app:
+## How to use this
+* The first thing to do is clone this project.
+* Then copy the files: `docker-compose.yml`, `Dockerfile`, `Gemfile` and `Gemfile.lock` to another
+folder. Put the name of your app as the name of the folder.
+* Using your terminal (or Docker Terminal if you are in Windows) navigate to the new folder and
+generate the Rails skeleton app:
 
    `docker-compose run web rails new . --force --database=postgresql`
 * Then build the image
 
    `docker-compose build`
-* Now we have to update Rails so it points to out docker postgres image. Replace the contents of `config/database.yml` with:
+* Now we have to update Rails so it points to out docker postgres image. Replace the contents
+of `config/database.yml` with:
 
 ```yml
 default: &default
@@ -24,13 +29,13 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: <NAME-OF-YOUR-APP>_development
 
 test:
   <<: *default
-  database: myapp_test
+  database: <NAME-OF-YOUR-APP>_test
 ```
-
+Where `<NAME-OF-YOUR-APP>` is the name you used in the second step.
 * Finally, boot the app with:
 
    `docker-compose up`
