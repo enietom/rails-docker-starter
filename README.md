@@ -42,3 +42,10 @@ test:
 
    And go to http://localhost:3000 to find Rails' Welcome Page (if you are using Docker Machine
    you'll need to go to `http://<IP-OF-YOUR-DOCKER-MACHINE>:3000`)
+
+## Further reading
+Some sites that might be helpful once your Rails+Docker project is generated.
+* [Rails Guides](http://guides.rubyonrails.org)
+* [Bootstrap Ruby Gem](https://github.com/twbs/bootstrap-rubygem)
+* [infinum.co - List of Commonly-used Gems](https://infinum.co/the-capsized-eight/a-gem-for-every-occasion-11-great-ruby-libraries-we-use-on-every-project)
+* [Free Open Source Bootstrap Themes](https://startbootstrap.com/)
