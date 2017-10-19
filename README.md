@@ -43,6 +43,12 @@ test:
    And go to http://localhost:3000 to find Rails' Welcome Page (if you are using Docker Machine
    you'll need to go to `http://<IP-OF-YOUR-DOCKER-MACHINE>:3000`)
 
+## Installing Javascript Libraries
+The docker image you are creating should already have Yarn installed. For instance, if you would like to install JQuery, then you'd run (after running `docker-compose up`):
+
+`docker-compose exec web yarn add jquery`
+
+However, be aware that you still need to add these libraries in the `application.js` file.
 ## Further reading
 Some sites that might be helpful once your Rails+Docker project is generated.
 * [Rails Guides](http://guides.rubyonrails.org)
